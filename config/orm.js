@@ -8,13 +8,13 @@ const orm = {
         });
     },
     insertOne: () => {
-        const query = "";
+        const query = "INSERT INTO burgers (burger_name) VALUES (?);";
         connection.query(query, (err, res) => {
 
         });
     },
     updateOne: () => {
-        const query = "";
+        const query = "UPDATE burgers SET devoured = ?  WHERE id = ?;";
         connection.query(query, (err, res) => {
 
         });
