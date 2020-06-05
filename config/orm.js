@@ -9,17 +9,19 @@ const orm = {
             // console.log(res);
         });
     },
-    insertOne: (newBurgerName) => {
+    insertOne: (newBurgerName, cb) => {
         const query = "INSERT INTO burgers (burger_name) VALUES ?";
         connection.query(query, [newBurgerName], (err, res) => {
             if (err) throw err;
+            cb(res);
             // console.log(res);
         });
     },
-    updateOne: (trueOrFalse, burgerId) => {
+    updateOne: (trueOrFalse, burgerId, cb) => {
         const query = "UPDATE burgers SET devoured = ?  WHERE id = ?";
         connection.query(query, [trueOrFalse, burgerId], (err, res) => {
             if (err) throw err;
+            cb(res);
             // console.log(res);
         });
     }

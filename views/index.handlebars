@@ -1,7 +1,18 @@
-<h1>Eat Da Burger</h1>
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <li>{{burger_name}}</li>
+    <img src="../public/assets/img/burger.png">
+    {{/if}}
+    {{/each}}
+</ul>
+
 
 <ul>
     {{#each burgers}}
+    {{#unless devoured}}
     <li>{{burger_name}}</li>
+    <img src="../public/assets/img/burger.png">
+    {{/unless}}
     {{/each}}
 </ul>
