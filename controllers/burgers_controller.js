@@ -22,9 +22,11 @@ router.get("/api/burgers", (req, res) => {
 });
 
 router.put("/api/burgers/:id", (req, res) => {
-    burger.updateOne((data) => {
+    const id = req.params.id;
+    burger.updateOne(
+        id
+    );
 
-    })
 })
 
 

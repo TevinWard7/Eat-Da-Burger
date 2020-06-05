@@ -17,8 +17,8 @@ const orm = {
             // console.log(res);
         });
     },
-    updateOne: (trueOrFalse, burgerId, cb) => {
-        const query = `UPDATE burgers SET devoured = ${trueOrFalse}  WHERE id = ${burgerId}`;
+    updateOne: (burgerId, cb) => {
+        const query = `UPDATE burgers SET devoured = true  WHERE id = ${burgerId}`;
         connection.query(query, (err, res) => {
             if (err) throw err;
             cb(res);

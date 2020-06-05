@@ -4,14 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Eat Da Burger</title>
 </head>
 
 <body>
-    <nav>
-        <h2>Eat Da Burger</h2>
+
+    <nav class="row text-center">
+        <div class="col-12">
+            <div><img src="assets/images/burger.png" width="50px" height="50px"></div>
+            <h2>Eat Da Burger</h2>
+        </div>
     </nav>
-    {{{ body }}}
+
+    <div class="container">
+        {{{ body }}}
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/eat.js"></script>
+
 </body>
 
 </html>

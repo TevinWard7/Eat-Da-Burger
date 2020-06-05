@@ -1,19 +1,28 @@
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li>{{burger_name}}</li>
-    <img src="../public/assets/img/burger.png">
-    {{/if}}
-    {{/each}}
-</ul>
+<div class="row">
 
+    <div class="col-5">
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li>{{burger_name}}</li>
+            <button id="eat">devour</button>
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>{{burger_name}}</li>
-    <img src="../public/assets/img/burger.png">
-    <button>devour</button>
-    {{/unless}}
-    {{/each}}
-</ul>
+    <div class="col-2">
+
+    </div>
+
+    <div class="col-5">
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <li>{{burger_name}}</li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+
+</div>
