@@ -1,8 +1,9 @@
-$('#eat').on('click', function () {
-    console.log()
-    // $.ajax({
-    //     method: 'POST',
-    //     url: `/api/burgers/${id}`,
-    //     success: location.reload()
-    // })
+$('.eat').on('click', function () {
+    const id = $(this).data("id");
+    console.log(id);
+    $.ajax({
+        method: 'GET',
+        url: `/${id}`,
+        success: location.reload()
+    });
 })

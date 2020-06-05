@@ -6,7 +6,7 @@
             {{#unless devoured}}
             <li>"{{burger_name}}"</li>
             <p>🍔</p>
-            <button id="eat">devour</button>
+            <button data-id="{{id}}" class="eat">devour</button>
             {{/unless}}
             {{/each}}
         </ul>

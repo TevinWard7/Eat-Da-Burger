@@ -30,12 +30,17 @@ router.post("/", (req, res) => {
     });
     res.redirect("/");
     console.log(`you sent ${newBurgerName}`)
-})
+});
 
-router.put("/api/burgers/:id", (req, res) => {
-    // const id = req.params.id;
-    // const query = "UPDATE burgers SET devoured = true  WHERE id =?";
-    // connection.query(query, [id]);
+router.get("/:id", (req, res) => {
+    const idNumber = req.params.id;
+    console.log(req.params.id)
+    const query = "UPDATE burgers SET devoured = true  WHERE id = ?";
+    connection.query(query, [idNumber], (err, result) => {
+        if (err) throw err
+    });
+    console.log(`you sent ${idNumber}`);
+    res.redirect("/");
 });
 
 
