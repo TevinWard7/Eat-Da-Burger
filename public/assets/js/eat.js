@@ -3,10 +3,14 @@ $(document).ready(
         anime({
             targets: '#uneaten',
             keyframes: [
-                { translateY: 250 },
-                { translateY: 0 },
+                { rotate: 360 },
+                // { translateX: -500 },
+                { scale: 5 },
+                { rotate: 360 },
+                // { translateX: -200 },
+                // { translateX: 0 },
             ],
-            duration: 500,
+            duration: 1000,
             easing: 'easeOutElastic(1, .8)',
             loop: false
         })
