@@ -19,3 +19,12 @@ opacity: 0%;
 .x:hover {
     opacity: 100%;
 }
+
+
+#search {
+    position: fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+    
+}
