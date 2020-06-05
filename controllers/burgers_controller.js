@@ -3,7 +3,11 @@ const burger = require("../models/burger.js");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("index");
+    const burgers = {
+        burgers: burger.selectAll
+    }
+    console.log(burgers)
+    res.render("index", burgers);
 });
 
 
