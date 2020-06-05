@@ -4,9 +4,10 @@
         <ul>
             {{#each burgers}}
             {{#unless devoured}}
-            <li>"{{burger_name}}"</li>
-            <p>🍔</p>
-            <button data-id="{{id}}" class="eat">devour</button>
+            <li id="uneaten">"{{burger_name}}"
+                <p>🍔</p>
+                <button data-id="{{id}}" class="eat">devour</button>
+            </li>
             {{/unless}}
             {{/each}}
         </ul>
@@ -29,14 +30,12 @@
 
 </div>
 
-
-
 <div class="row text-center">
     <div id="make" class="col">
         <label>Make a burger</label>
         <form action="/" method="POST">
             <input type="text" name="burger" placeholder="burger name">
-            <input type="submit" value="Make">
+            <input type="submit" value="Make" id="submit-burger">
         </form>
     </div>
 </div>
