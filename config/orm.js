@@ -9,16 +9,16 @@ const orm = {
             // console.log(res);
         });
     },
-    insertOne: (newBurgerName, cb) => {
-        const query = `INSERT INTO burgers (burger_name) VALUES ${newBurgerName}`;
+    insertOne: (tableName, newBurgerName, cb) => {
+        const query = `INSERT INTO ${tableName} (burger_name) VALUES ${newBurgerName}`;
         connection.query(query, (err, res) => {
             if (err) throw err;
             cb(res);
             // console.log(res);
         });
     },
-    updateOne: (burgerId, cb) => {
-        const query = `UPDATE burgers SET devoured = true  WHERE id = ${burgerId}`;
+    updateOne: (tableName, burgerId, cb) => {
+        const query = `UPDATE ${tableName} SET devoured = true  WHERE id = ${burgerId}`;
         connection.query(query, (err, res) => {
             if (err) throw err;
             cb(res);
