@@ -14,8 +14,11 @@ router.get("/", (req, res) => {
 
 router.get("/api/burgers", (req, res) => {
     burger.selectAll((data) => {
-    })
-    res.json()
+        const hbsObject = {
+            burgers: data
+        };
+        res.json(hbsObject)
+    });
 })
 
 
