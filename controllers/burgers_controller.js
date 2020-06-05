@@ -3,16 +3,20 @@ const burger = require("../models/burger.js");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-
     burger.selectAll((data) => {
-        const hbsobject = {
+        const hbsObject = {
             burgers: data
         };
-        console.log("hbsobject " + hbsobject)
-        res.render("index", hbsobject);
+        console.log(hbsObject)
+        res.render("index", hbsObject);
     });
-
 });
+
+router.get("/api/burgers", (req, res) => {
+    burger.selectAll((data) => {
+    })
+    res.json()
+})
 
 
 module.exports = router;
