@@ -10,16 +10,16 @@ const orm = {
         });
     },
     insertOne: (newBurgerName, cb) => {
-        const query = "INSERT INTO burgers (burger_name) VALUES ?";
-        connection.query(query, [newBurgerName], (err, res) => {
+        const query = `INSERT INTO burgers (burger_name) VALUES ${newBurgerName}`;
+        connection.query(query, (err, res) => {
             if (err) throw err;
             cb(res);
             // console.log(res);
         });
     },
     updateOne: (trueOrFalse, burgerId, cb) => {
-        const query = "UPDATE burgers SET devoured = ?  WHERE id = ?";
-        connection.query(query, [trueOrFalse, burgerId], (err, res) => {
+        const query = `UPDATE burgers SET devoured = ${trueOrFalse}  WHERE id = ${burgerId}`;
+        connection.query(query, (err, res) => {
             if (err) throw err;
             cb(res);
             // console.log(res);

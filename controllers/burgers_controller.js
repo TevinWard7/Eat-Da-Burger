@@ -19,6 +19,12 @@ router.get("/api/burgers", (req, res) => {
         };
         res.json(hbsObject)
     });
+});
+
+router.put("/api/burgers/:id", (req, res) => {
+    burger.updateOne((data) => {
+
+    })
 })
 
 
