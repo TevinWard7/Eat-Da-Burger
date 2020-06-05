@@ -9,7 +9,7 @@ $(document).ready(
         });
     }),
 
-    $('#x').on('click', function () {
+    $('.x').on('click', function () {
         const id = $(this).data('id');
         console.log(id);
         $.ajax({

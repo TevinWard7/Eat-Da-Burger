@@ -12,10 +12,10 @@ li {
 
 }
 
-#x {
+.x {
 opacity: 0%;
 }
 
-#x:hover {
+.x:hover {
     opacity: 100%;
 }

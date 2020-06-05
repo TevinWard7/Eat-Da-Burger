@@ -20,7 +20,8 @@
         <ul>
             {{#each burgers}}
             {{#if devoured}}
-            <li>{{burger_name}} 💯 <img src="/assets/images/x.png" width="20px" height="20px" data-id="{{id}}" id="x">
+            <li>{{burger_name}} 💯 <img src="/assets/images/x.png" width="20px" height="20px" data-id="{{id}}"
+                    class="x">
             </li>
             {{/if}}
             {{/each}}
@@ -38,7 +39,7 @@
 <div class="row text-center">
     <div class="col">
         <form action="/" method="POST">
-            <input type="text" name="burger">
+            <input type="text" name="burger" placeholder="burger name">
             <input type="submit" value="Submit">
         </form>
     </div>
