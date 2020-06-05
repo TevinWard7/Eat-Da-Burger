@@ -34,13 +34,18 @@ router.post("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
     const idNumber = req.params.id;
-    console.log(req.params.id)
     const query = "UPDATE burgers SET devoured = true  WHERE id = ?";
     connection.query(query, [idNumber], (err, result) => {
         if (err) throw err
     });
-    console.log(`you sent ${idNumber}`);
-    res.redirect("/");
+});
+
+router.delete("/:id", (req, res) => {
+    const idNumber = req.params.id;
+    const query = "DELETE FROM burgers WHERE id = ?;"
+    connection.query(query, [idNumber], (err, res) => {
+        if (err) throw err;
+    })
 });
 
 
