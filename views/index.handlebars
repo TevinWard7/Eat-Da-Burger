@@ -1,6 +1,6 @@
 <div class="row text-center">
 
-    <div class="col-3">
+    <div class="col-5">
         <ul>
             {{#each burgers}}
             {{#unless devoured}}
@@ -13,10 +13,10 @@
         </ul>
     </div>
 
-    <div class="col-6">
+    <div class="col-2">
     </div>
 
-    <div class="col-3">
+    <div class="col-5">
         <ul>
             {{#each burgers}}
             {{#if devoured}}
@@ -32,10 +32,10 @@
 
 <div class="row text-center">
 
-    <div class="col-3">
+    <div class="col">
     </div>
 
-    <div id="make" class="col-6">
+    <div id="make" class="col">
         <label>Make a burger</label>
         <form action="/" method="POST">
             <input type="text" name="burger" placeholder="burger name">
@@ -43,6 +43,6 @@
         </form>
     </div>
 
-    <div class="col-3">
+    <div class="col">
     </div>
 </div>
