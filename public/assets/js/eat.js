@@ -1,4 +1,15 @@
 $(document).ready(
+
+    // anime({
+    //     targets: '#make-label',
+    //     keyframes: [
+    //         { rotate: 360 }
+    //     ],
+    //     duration: 1000,
+    //     easing: 'easeOutElastic(1, .8)',
+    //     loop: false
+    // }),
+
     $('#submit-burger').on('click', () => {
         anime({
             targets: '#uneaten',
