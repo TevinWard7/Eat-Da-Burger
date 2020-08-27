@@ -11,14 +11,6 @@ li {
     margin: 5px;
 }
 
-.x {
-opacity: 0%;
-}
-
-.x:hover {
-    opacity: 100%;
-}
-
 #make {
     position: fixed;
     left: 50%;
