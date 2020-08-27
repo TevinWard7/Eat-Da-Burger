@@ -6,7 +6,7 @@ Then set that list of names to "devoured" or not :)
 ## Table Of Contents
 - [User Story](#User-Story)
 - [Technology](#Technology)
-- [Link to depolyed site](#Link-to-depolyed-site)
+- [Link to depolyed app](#Link-to-depolyed-app)
 
 ## User Story
 ```
