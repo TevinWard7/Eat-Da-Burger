@@ -25,5 +25,5 @@ So that I can keep track of which ones have been eaten
 * MySQL
 
 # Link To Deployed App
-![picture](/images/ss.png)
+![picture](public/assets/images/ss.png)
 https://eat-da-burger-app-7.herokuapp.com/
